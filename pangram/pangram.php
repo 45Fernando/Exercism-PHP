@@ -18,4 +18,13 @@
 				"c,ae,oe,a,e,i,o,u,a,e,i,o,u,a,e,i,o,u,y,a,e,i,o,u,a,o,O,A,A,A,A,A,E,E,E,E,I,I,I,I,O,O,O,O,U,U,U,U,Y,C,AE,OE,b");
 		return str_replace($search, $replace, $str);
 	}
+	
+	function isPangram2($cadena){
+		foreach (range('a', 'z') as $letter){
+		if (stripos($cadena, $letter) === false){
+			return false;
+		}
+	}		
+		return true;
+	}
 ?>
